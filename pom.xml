@@ -172,7 +172,7 @@
   </build>
 
   <profiles>
-    <!-- git-hooks profile: only runs when running alongside .git repo -->
+    <!-- git-hooks: only active when running alongside .git repo -->
     <profile>
       <id>git-hooks</id>
       <activation>
