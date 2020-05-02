@@ -1,35 +1,25 @@
 package com.github.akshatdev0.swapi;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.collect.ImmutableMap;
 import java.util.Map;
+import org.immutables.value.Value;
 
-class GraphQLRequest {
+@Value.Immutable
+@JsonSerialize(as = ImmutableGraphQLRequest.class)
+@JsonDeserialize(as = ImmutableGraphQLRequest.class)
+interface GraphQLRequest {
 
-  @JsonProperty("query")
-  private String query;
+  String query();
 
-  @JsonProperty("variables")
-  private Map<String, Object> variables;
-
-  @JsonProperty("operationName")
-  private String operationName;
-
-  GraphQLRequest() {
-    query = "";
-    variables = ImmutableMap.of();
-    operationName = "";
+  @Value.Default
+  default Map<String, Object> variables() {
+    return ImmutableMap.of();
   }
 
-  public String query() {
-    return query;
-  }
-
-  public Map<String, Object> variables() {
-    return variables;
-  }
-
-  public String operationName() {
-    return operationName;
+  @Value.Default
+  default String operationName() {
+    return "";
   }
 }

@@ -1,10 +1,6 @@
 # SWAPI GraphQL Java
 
-#### 2. GraphQL Hello World
-
-- Base GraphQL setup
-- GraphQL Schema Definition Language
-- GraphQL Query Resolver
+#### 3. Using Immutables for GraphQLRequest
 
 ---
 #### Steps to run:
