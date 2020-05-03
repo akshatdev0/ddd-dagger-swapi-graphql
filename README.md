@@ -1,6 +1,6 @@
 # SWAPI GraphQL Java
 
-#### 5. Adding all queries 
+#### 6. Modularizing the code
 
 ---
 #### Steps to run:

@@ -1,4 +1,4 @@
-package com.github.akshatdev0.swapi;
+package com.github.akshatdev0.swapi.starwars.person;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
