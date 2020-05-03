@@ -9,7 +9,7 @@ import org.immutables.value.Value;
 @Value.Immutable
 @JsonSerialize(as = ImmutableGraphQLRequest.class)
 @JsonDeserialize(as = ImmutableGraphQLRequest.class)
-interface GraphQLRequest {
+public interface GraphQLRequest {
 
   String query();
 

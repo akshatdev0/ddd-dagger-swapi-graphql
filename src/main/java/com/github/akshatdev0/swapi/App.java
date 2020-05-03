@@ -32,8 +32,8 @@ public class App
     // GraphQL
     final GraphQLSchema graphQLSchema =
         SchemaParser.newParser()
-            .file("hello-world.graphql")
-            .resolvers(new HelloWorldGraphQLQueryResolver())
+            .file("schema.graphql")
+            .resolvers(new AppGraphQLQueryResolver())
             .build()
             .makeExecutableSchema();
     graphQL = GraphQL.newGraphQL(graphQLSchema).build();

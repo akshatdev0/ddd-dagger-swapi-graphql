@@ -1,6 +1,6 @@
 # SWAPI GraphQL Java
 
-#### 3. Using Immutables for GraphQLRequest
+#### 4. Adding 'Person' query 
 
 ---
 #### Steps to run:
@@ -10,10 +10,19 @@ sam build
 sam local start-api
 ```
 
-Send below GraphQL Request with Postman or Postwoman
+Send below GraphQL Requests with Postman or Postwoman
 ```
 {
-    hello
+  person {
+    id
+    name
+    birthYear
+    gender
+    height
+    mass
+    created
+    edited
+  }
 }
 ```
 
@@ -21,7 +30,16 @@ Response should be as follows
 ```
 {
   "data": {
-    "hello": "world"
+    "person": {
+      "id": "33",
+      "name": "John",
+      "birthYear": "1980",
+      "gender": "male",
+      "height": 180,
+      "mass": 80.88,
+      "created": "2 days ago",
+      "edited": "1 hour ago"
+    }
   }
 }
 ```
