@@ -2,30 +2,41 @@ package com.github.akshatdev0.swapi;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import java.util.List;
 import org.immutables.value.Value;
 
 @Value.Immutable
 @JsonSerialize(as = ImmutablePerson.class)
 @JsonDeserialize(as = ImmutablePerson.class)
-public interface Person {
+public interface Starship {
 
   String id();
 
   String name();
 
-  String birthYear();
+  String model();
 
-  String gender();
+  List<String> manufacturers();
 
-  int height();
+  float costInCredits();
 
-  float mass();
+  float length();
 
-  String eyeColor();
+  int maxAtmospheringSpeed();
 
-  String hairColor();
+  String crew();
 
-  String skinColor();
+  String passengers();
+
+  float cargoCapacity();
+
+  String consumables();
+
+  float hyperdriveRating();
+
+  int MGLT();
+
+  String starshipClass();
 
   String created();
 

@@ -2,30 +2,27 @@ package com.github.akshatdev0.swapi;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import java.util.List;
 import org.immutables.value.Value;
 
 @Value.Immutable
-@JsonSerialize(as = ImmutablePerson.class)
-@JsonDeserialize(as = ImmutablePerson.class)
-public interface Person {
+@JsonSerialize(as = ImmutableFilm.class)
+@JsonDeserialize(as = ImmutableFilm.class)
+public interface Film {
 
   String id();
 
-  String name();
+  String title();
 
-  String birthYear();
+  int episodeID();
 
-  String gender();
+  String openingCrawl();
 
-  int height();
+  String director();
 
-  float mass();
+  List<String> producers();
 
-  String eyeColor();
-
-  String hairColor();
-
-  String skinColor();
+  String releaseDate();
 
   String created();
 
