@@ -1,5 +1,6 @@
 extend type Query {
-    starship: Starship
+    allStarships: [Starship]
+    starship(id: String!) : Starship
 }
 
 """A single transport craft that has hyperdrive capability."""

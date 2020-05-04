@@ -27,11 +27,11 @@ public class GraphQLRequestHandler {
     final GraphQLSchema graphQLSchema =
         SchemaParser.newParser()
             .files(
-                "swapi.graphql",
-                "film.graphql",
-                "person.graphql",
-                "planet.graphql",
-                "starship.graphql")
+                "graphql/swapi.graphql",
+                "graphql/film.graphql",
+                "graphql/person.graphql",
+                "graphql/planet.graphql",
+                "graphql/starship.graphql")
             .resolvers(
                 new FilmGraphQLQueryResolver(),
                 new PersonGraphQLQueryResolver(),

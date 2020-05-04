@@ -2,6 +2,7 @@ package com.github.akshatdev0.swapi.starwars.film;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.google.common.collect.ImmutableList;
 import java.util.List;
 import org.immutables.value.Value;
 
@@ -20,7 +21,10 @@ public interface Film {
 
   String director();
 
-  List<String> producers();
+  @Value.Default
+  default List<String> producers() {
+    return ImmutableList.of();
+  }
 
   String releaseDate();
 

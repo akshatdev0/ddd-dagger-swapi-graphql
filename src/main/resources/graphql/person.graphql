@@ -1,5 +1,6 @@
 extend type Query {
-    person: Person
+    allPersons: [Person]
+    person(id: String!) : Person
 }
 
 """An individual person or character within the Star Wars universe."""

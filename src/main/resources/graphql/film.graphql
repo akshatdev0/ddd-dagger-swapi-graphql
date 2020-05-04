@@ -1,5 +1,6 @@
 extend type Query {
-    film: Film
+    allFilms: [Film]
+    film(id: String!) : Film
 }
 
 type Film {

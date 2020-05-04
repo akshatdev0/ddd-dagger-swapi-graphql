@@ -22,13 +22,13 @@ public interface Planet {
 
   String gravity();
 
-  Float population();
+  float population();
 
   List<String> climates();
 
   List<String> terrains();
 
-  Float surfaceWater();
+  float surfaceWater();
 
   String created();
 

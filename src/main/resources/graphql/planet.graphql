@@ -1,5 +1,6 @@
 extend type Query {
-    planet: Planet
+    allPlanets: [Planet]
+    planet(id: String!) : Planet
 }
 
 """
